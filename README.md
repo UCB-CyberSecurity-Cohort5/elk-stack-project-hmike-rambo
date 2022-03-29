@@ -7,9 +7,9 @@ The files in this repository were used to configure the network depicted below.
 
 ![Final_Network_Diagram](Images/Network_Diagram_Project_1.PNG)
 
-These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _____ file may be used to install only certain pieces of it, such as Filebeat.
+These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the Elk file may be used to install only certain pieces of it, such as Filebeat.
 
-  - _TODO: Enter the playbook file._
+  -(playbooks/Install_Elk.yml)
 
 This document contains the following details:
 - Description of the Topologu
