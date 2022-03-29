@@ -12,7 +12,7 @@ These files have been tested and used to generate a live ELK deployment on Azure
   ![Docker_playbook](playbooks/my-playbook.yml)
 
 This document contains the following details:
-- Description of the Topologu
+- Description of the Topology
 - Access Policies
 - ELK Configuration
   - Beats in Use
@@ -26,9 +26,7 @@ The main purpose of this network is to expose a load-balanced and monitored inst
 
 Load balancing ensures that the application will be highly available, in addition to restricting inbound traffic to the network. The load balancer guarentees that the vulnerable web servers will share the incoming traffic equally. The advantage of a jump box is to restrict access to only authorized users who will be able to connect for the purpose of making any necessary updates.    
 
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to any system data and system metrics.
-- _TODO: What does Filebeat watch for?_
-- _TODO: What does Metricbeat record?_
+Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to any system data and system metrics. Filebeat is an exporter of log files. Filebeat monitors any changes made to log files and sends that data to either elasticsearch or logstash to be compiled. Similarly metricbeat is an exporter of operating system metrics and service metrics running on the server. These statistics are forwarded and compiled to either elasticsearch or logstash.    
 
 The configuration details of each machine may be found below.
 _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
@@ -45,19 +43,20 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 
 The machines on the internal network are not exposed to the public Internet. 
 
-Only the _____ machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- _TODO: Add whitelisted IP addresses_
+Only the jump box machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
+13.88.44.197
 
-Machines within the network can only be accessed by _____.
-- _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
+Machines within the network can only be accessed by each other. The DVWA 1,2, and 3 send traffic to the ELK server. 
 
 A summary of the access policies in place can be found in the table below.
 
-| Name     | Publicly Accessible | Allowed IP Addresses |
+| Name     | Publicly Accessible | Allowed IP addresses |
 |----------|---------------------|----------------------|
-| Jump Box | Yes/No              | 10.0.0.1 10.0.0.2    |
-|          |                     |                      |
-|          |                     |                      |
+| Jump Box | Yes                 | 13.88.44.197         |
+| DVWA 1   | No                  | 10.0.0.1-254         |
+| DVWA 2   | No                  | 10.0.0.1-254         |
+| DVWA 3   | No                  | 10.0.0.1.254         |
+| ELK      | No                  | 10.1.0.1-254         |
 
 ### Elk Configuration
 
