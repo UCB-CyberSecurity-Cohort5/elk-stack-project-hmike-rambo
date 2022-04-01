@@ -26,7 +26,7 @@ The main purpose of this network is to expose a load-balanced and monitored inst
 
 Load balancing ensures that the application will be highly available, in addition to restricting inbound traffic to the network. The load balancer guarentees that the vulnerable web servers will share the incoming traffic equally. The advantage of a jump box is to restrict access to only authorized users who will be able to connect for the purpose of making any necessary updates.    
 
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to any system data and system metrics. Filebeat is an exporter of log files. Filebeat monitors any changes made to log files and sends that data to either elasticsearch or logstash to be compiled. Similarly metricbeat is an exporter of operating system metrics and service metrics running on the server. These statistics are forwarded and compiled to either elasticsearch or logstash.    
+Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to any system data and system metrics. Filebeat is an exporter of log files and monitors and changes made to these files. Similarly metricbeat is an exporter of operating system metrics and service metrics running on the server.    
 
 The configuration details of each machine may be found below.
 _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
@@ -83,6 +83,8 @@ We have installed the following Beats on these machines:
 -Metricbeat
 
 These Beats allow us to collect the following information from each machine:
+- Filebeat monitors changes made to logfiles. 
+- 
 - _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
 
 ### Using the Playbook
