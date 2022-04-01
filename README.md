@@ -69,16 +69,18 @@ The playbook implements the following tasks:
 - Installation of the Docker_container elk. Configuring the elk container to install the latest version 761, specify specific port mappings, and to always run the container after restart.
 - Use the system daemon systemd to enable docker on boot of the ELK machine. 
 
+![Elk_playbook](playbooks/install_elk.yml)
+
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
 ![Docker_PS_Output](Images/Day_1_Part_4.PNG)
 
 ### Target Machines & Beats
-This ELK server is configured to monitor the following machines:
-- _TODO: List the IP addresses of the machines you are monitoring_
+This ELK server is configured to monitor the following machines: DVWA 1, DVWA 2, and DVWA 3 at 10.0.0.5, 10.0.0.6, and 10.0.0.7 respectively. 
 
 We have installed the following Beats on these machines:
-- _TODO: Specify which Beats you successfully installed_
+-Filebeat
+-Metricbeat
 
 These Beats allow us to collect the following information from each machine:
 - _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
