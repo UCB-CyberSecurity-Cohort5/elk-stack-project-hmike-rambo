@@ -63,10 +63,11 @@ A summary of the access policies in place can be found in the table below.
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because the agents are not directly installed on the ELK machine only on the ansible container. The ansible container agents install beats onto the ELK machine for monitoring of the web servers.
 
 The playbook implements the following tasks:
-- installation of the apt packages docker.io and python3-pip. Docker.io is used to run the container and python3-pip is used to install the Python software
-- installation of the pip package docker required by ansible to maintain the state of the Docker containers
-- 
-
+- Installation of the apt packages docker.io and python3-pip. Docker.io is used to run the container and python3-pip is used to install the Python software
+- Installation of the pip package docker required by ansible to maintain the state of the Docker containers
+- Installation of the sysctl package vm.max_map_count set to 262144 which configures the ELK machine to use more memory required for the ELK container to run.  
+- Installation of the Docker_container elk. Configuring the elk container to install the latest version 761, specify specific port mappings, and to always run the container after restart.
+- Use the system daemon systemd to enable docker on boot of the ELK machine. 
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
