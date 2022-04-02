@@ -29,7 +29,6 @@ Load balancing ensures that the application will be highly available, in additio
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to any system data and system metrics. Filebeat is an exporter of log files and monitors and changes made to these files. Similarly metricbeat is an exporter of operating system metrics and service metrics running on the server.    
 
 The configuration details of each machine may be found below.
-_Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
 
 | Name     | Function   | IP Address | Operating System |
 |----------|------------|------------|------------------|
