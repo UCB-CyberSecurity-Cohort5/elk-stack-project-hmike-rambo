@@ -7,3 +7,5 @@ It is appropriate to use containers in cloud deployments when setting up multipl
 ![Attaching to Container](https://github.com/UCB-CyberSecurity-Cohort5/elk-stack-project-hmike-rambo/blob/9639e5b2c79e26264009e67491e229cfd4bbad0a/Images/Day_1_Part_2.2.PNG)
 
 ![Verify container runnign correctly](https://github.com/UCB-CyberSecurity-Cohort5/elk-stack-project-hmike-rambo/blob/075e4ed540bc62e909ba923f79f1078b4af32651/Images/Day_1_Part_4.PNG)
+
+Without containers any packages that would need to be installed would first need to be installed to the jump box, then using scripts could be installed to the virtual machines. The disadvantage of doing this is that it would require manualing doing the installing on the jump box and keeping up with any updates. It also uses resources on the jump box. The disadvantage of using a container is that they are very lightweight without many security features. Also because they are lightweight it might seem easy to have multiple containers in use at a time which can use resoruces to run.
